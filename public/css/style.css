@@ -1,0 +1,430 @@
+/* ======== General ======== */
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* ======== Header ======== */
+.header {
+
+    background-color: #004b66;
+    color: white;
+    padding: 10px 0;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .logo img {
+    width: 140px;
+}
+.header .hotline {
+    font-size: 0.9rem;
+}
+.header .search-bar {
+    flex-grow: 1;
+    margin: 0 20px;
+    display: flex;
+}
+.header .search-bar input {
+    width: 100%;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+.header .search-bar button {
+    background-color: #34bfa3;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 0 4px 4px 0;
+}
+.header .actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.header .actions a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+.header .actions a:hover {
+    color: #ffc107;
+}
+
+/* ======== Categories ======== */
+.categories {
+    background-color: #fff;
+    padding: 10px 0;
+    border-bottom: 2px solid #e0e0e0;
+}
+.categories ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+}
+.categories li {
+    font-weight: bold;
+    color: #004b66;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.categories li:hover {
+    color: #34bfa3;
+}
+
+/* ======== Banner ======== */
+.banner-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.banner-carousel::-webkit-scrollbar {
+    display: none; /* hide scrollbar */
+}
+
+.banner-item {
+    position: relative;
+    flex: 0 0 100%;
+    max-width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.banner-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.banner-item:hover img {
+    transform: scale(1.05);
+}
+
+.banner-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.banner-text h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.banner-text p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .banner-item img {
+        height: 200px;
+    }
+    .banner-text h3 {
+        font-size: 1.2rem;
+    }
+    .banner-text p {
+        font-size: 0.9rem;
+    }
+}
+
+/* ======== Featured Products ======== */
+.featured {
+    padding: 40px 0;
+    text-align: center;
+}
+.featured h2 {
+    margin-bottom: 25px;
+    color: #004b66;
+}
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 0 10px;
+}
+.product {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.product:hover {
+    transform: translateY(-5px);
+}
+.product img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+.product h4 {
+    color: #004b66;
+    font-size: 1.1rem;
+}
+.product span {
+    color: #34bfa3;
+    font-weight: bold;
+}
+
+
+
+
+/*Suggestions in Search Bar */
+/* صندوق الاقتراحات */
+#suggestions {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    overflow: hidden;
+    font-size: 15px;
+}
+
+/* عنصر داخل الاقتراحات */
+#suggestions div {
+    padding: 12px 15px;
+    cursor: pointer;
+    transition: 0.2s;
+    color: #333;
+}
+
+/* عند المرور */
+#suggestions div:hover {
+    background: #f7f7f7;
+    padding-left: 25px;
+}
+
+/* رسالة "لا توجد نتائج" */
+#suggestions .no-results {
+    color: #888;
+    text-align: center;
+    background: #fafafa;
+    font-style: italic;
+}
+
+/* لتثبيت العنصر داخل form */
+.search-bar {
+    position: relative;
+}
+
+#suggestions {
+    display: none;
+    position: absolute;
+    background: white;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    z-index: 5000;
+    margin-top: 5px;
+}
+
+.suggest-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggest-item:hover {
+    background: #f3f3f3;
+}
+
+/* صندوق "هل تقصد؟" بنفس ستايل الـ suggestions */
+#didYouMean.smart-box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    position: absolute;
+    top: 45px; /* اضبط حسب مكان البحث */
+    left: 0;
+    width: 100%;
+    z-index: 3000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    overflow: hidden;
+    font-size: 15px;
+    display: none; /* يظهر عند وجود الاقتراح */
+}
+
+/* عنوان "هل تقصد؟" */
+#didYouMean.smart-box p {
+    margin: 0;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* العناصر داخل الصندوق */
+#didYouMean.smart-box a {
+    display: block;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+    transition: 0.2s;
+}
+
+/* عند المرور على عنصر */
+#didYouMean.smart-box a:hover {
+    background: #f7f7f7;
+    padding-left: 25px;
+}
+
+
+/* ======== Footer ======== */
+.footer {
+    background-color: #004b66;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.featured-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.featured-header h2 {
+    font-size: 26px;
+    margin: 0;
+}
+
+.featured-header .icon {
+    width: 30px;
+    height: 30px;
+}
+.featured-title img {
+    width:200px;
+    height: 200px;
+    object-fit: cover;           
+    border-radius: 50%;          
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    border: 2px solid #fff;
+}
+.location-filter {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+/* Notify Us Button */
+.btn-notify {
+    margin-top: 10px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.btn-notify:hover {
+    background-color: #e68900;
+    transform: translateY(-2px);
+}
+
+.btn-details {
+    background-color: #1976d2;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    display: block;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+
+.product {
+    position: relative; /* Essential for positioning the label */
+    /* ... other product styles */
+}
+
+.out-of-stock-label {
+    position: absolute;
+    top: 10px;        /* Adjust position as needed */
+    right: 10px;      /* Adjust position as needed */
+    background-color: #e74c3c; /* Red background */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 10; /* Make sure it appears above the image */
+    text-align: center;
+}
+
+
+.btn-add-to-cart {
+    display: block; /* Stack them vertically */
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none; /* Remove underline for links */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+/* --- 3. "Add to Cart" Button (Primary Action) --- */
+.btn-add-to-cart {
+    background-color: #2ecc71; /* Green */
+    color: white;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #27ae60;
+    transform: translateY(-1px);
+}
+
+/* Styling for when the user is already subscribed */
+.btn-notified {
+    background-color: #bdc3c7; /* Light grey */
+    color: #4f5f6f; /* Darker text */
+    cursor: default !important;
+    border: 1px solid #aebcbf;
+    /* Remove hover effect for this state */
+    transform: none !important; 
+    box-shadow: none !important;
+}
+
+/* --- Styles for the Action Container (Ensure proper layout when replacing buttons) --- */
+.product-actions {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Adds spacing between the buttons */
+    width: 100%;
+}
