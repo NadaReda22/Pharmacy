@@ -1,64 +1,81 @@
-<<<<<<< HEAD
-# Pharmacy
-A comprehensive platform for clients to search, track, and purchase pharmaceutical products across certified pharmacies in Egypt, with real-time features and pharmacy engagement incentives.
-=======
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🏥 Pharmacy Unit System (Egypt)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A centralized platform that connects **licensed pharmacies across Egypt** in one place, helping users quickly find **unavailable or rare medicines**, while encouraging pharmacies to stock high-demand products through a **reward and scoring system**.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🎯 Problem Statement
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Patients often waste time searching for unavailable medicines across multiple pharmacies.  
+There was **no single trusted platform** that:
+- Aggregates licensed pharmacies
+- Tracks medicine availability
+- Notifies users in real time when products are restocked
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 💡 Solution
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+This system provides:
+- **One unified search platform** for medicines
+- **Real-time availability tracking**
+- **Smart incentives** for pharmacies to provide rare products
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## ✨ Key Features
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 🔍 Product Search
+- **Live Search** (instant results while typing)
+- **Smart Search** (handles variations & similar product names)
 
-### Premium Partners
+### 🏪 Pharmacy Scoring & Rewards
+- Pharmacies gain **scores** when users successfully find products through them
+- Scores increase pharmacy ranking
+- High-ranking pharmacies are eligible for **rewards**
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 🔔 Real-Time Notifications
+- Users receive notifications when:
+  - A requested product is restocked
+- Pharmacies receive notifications when:
+  - A product is highly requested
+- Powered by **Laravel Reverb**
 
-## Contributing
+### 📊 Filament Admin Dashboard
+- Manage products & pharmacies
+- Filter by:
+  - Most requested products
+  - Minimum stock
+  - Notification demand
+- Helps decision-making for product supply
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### ⚙️ Performance & Scalability
+- Redis caching (search, leaderboards)
+- Database transactions for data consistency
+- Queue system for notifications
+- Distributed locks to prevent race conditions
+- API throttling to prevent abuse
+- Real-time leaderboards
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 🛠️ Tech Stack
 
-## Security Vulnerabilities
+| Layer | Technology |
+|------|-----------|
+| Backend | PHP 8.2, Laravel 12|
+| Database | MySQL |
+| Cache | Redis |
+| Real-Time | Laravel Reverb |
+| Queues | Laravel Queue Workers |
+| Admin Panel | Filament |
+| Auth & Sessions | Laravel Session Management |
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## 📦 Installation
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
->>>>>>> 5d891e9 (upload pharmacy project)
+### 1️⃣ Clone Repository
+```bash
+git clone https://github.com/NadaReda22/Pharmacy.git
+cd Pharmacy
