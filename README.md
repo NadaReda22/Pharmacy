@@ -28,11 +28,14 @@ This system provides:
 ### 🔍 Product Search
 - **Live Search** (instant results while typing)
 - **Smart Search** (handles variations & similar product names)
+- <img src="/tests/Screenshot%20(407).png" width="400" height="400" alt="Admin Dashboard"> 
+
 
 ### 🏪 Pharmacy Scoring & Rewards
 - Pharmacies gain **scores** when users successfully find products through them
 - Scores increase pharmacy ranking
 - High-ranking pharmacies are eligible for **rewards**
+- <img src="/tests/Screenshot%20(410).png" width="400" height="400" alt="Admin Dashboard"> 
 
 ### 🔔 Real-Time Notifications
 - Users receive notifications when:
@@ -40,11 +43,14 @@ This system provides:
 - Pharmacies receive notifications when:
   - A product is highly requested
 - Powered by **Laravel Reverb**
+- <img src="/tests/Screenshot%20(408).png" width="400" height="400" alt="Admin Dashboard"> 
+
 
 ### 📊 Filament Admin Dashboard
 - Manage products & pharmacies
 - Filter by:
   - Most requested products
+  - <img src="/tests/Screenshot%20(409).png" width="300" height="300" alt="Admin Dashboard"> 
   - Minimum stock
   - Notification demand
 - Helps decision-making for product supply
@@ -79,3 +85,11 @@ This system provides:
 ```bash
 git clone https://github.com/NadaReda22/Pharmacy.git
 cd Pharmacy
+```
+---
+
+👨‍💻 Author
+
+Nada Reda Backend Developer | Problem Solving |  (2025)
+
+[LinkedIn](https://www.linkedin.com/in/nada-reda22) | [Email](mailto:nadoarmando22@gmail.com) | [Youtube](https://www.youtube.com/watch?v=YmyozktMkIE&t=11s)
